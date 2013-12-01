@@ -44,8 +44,9 @@ typeset -gU cdpath fpath mailpath path
 # Set the list of directories that Zsh searches for programs.
 path=(
   $(ruby -rubygems -e "puts Gem.user_dir")/bin
-  $HOME/bin:$HOME/.luarocks/bin
-  /usr/local/bin
+  $HOME/bin
+  $HOME/.luarocks/bin
+  /usr/local/{bin,sbin}
   /usr/local/share/npm/bin
   $path
 )
